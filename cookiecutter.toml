@@ -1,0 +1,40 @@
+# The cookiecutter config
+#
+# This is automatically converted into cookiecutter.json
+[cookiecutter]
+# Used for `project.name` in pyproject.toml
+project_name = "example-project"
+# Used for python package name (so must be a valid python identifier)
+project_slug = "{{ cookiecutter.project_name|replace('-', '_') }}"
+# Used for `project.description`
+description = "An example project generated from Techcable's cookiecutter template"
+author = "Techcable"
+email = "yourname @ email.net"
+github_repo = "{{ cookiecutter.author }}/{{ cookiecutter.project_name }}"
+license = [
+    "APACHE-2.0 WITH LLVM-exception",
+    "BlueOak-1.0.0",
+    "MIT OR APACHE-2.0",
+    "MIT",
+    "GPL-3.0-or-later",
+    "MPL-2.0",
+    "LGPL-3.0-or-later",
+    "All Rights Reserved",
+]
+# Should always be true
+init_git = true
+
+#
+# Other settings
+#
+
+# Don't render these files
+_copy_without_render = [
+    # Justfile uses a similar `{{` escape sequence to Jinja
+    "Justfile",
+]
+
+[cookiecutter."__prompts__"]
+project_name = "Project name?"
+project_slug = "Python package name?"
+init_git = "Initialize git repo?"

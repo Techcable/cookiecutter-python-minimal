@@ -1,0 +1,37 @@
+= Techcable's minimal python cookiecutter
+Techcable <git@techcable.net>
+
+// URL references
+:setuptools-docs: https://setuptools.pypa.io/en/latest/
+:cookiecutter-repo: https://github.com/cookiecutter/cookiecutter
+:pypa-packaging-guide: https://packaging.python.org/en/latest/
+:pypa-packaging-tutorial: https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+A minimal {cookiecutter-url}[cookiecutter] template for Python projects using {setuptools}[setuptools]. It closely follows the recomendations in the _official_ {python-packaging-guide}[packaging guide] and {python-packaging-tutorial}[tutorial]. See below  [tutorial(See below for more details; also the {pypa-packging-tutorial}[_official tutorial_]
+
+For a more complex (but powerful) alternative, consider [https://github.com/cjolowicz/cookiecutter-hypermodern-python[cookiecutter-hypermodern-python], upon which this is loosely based.
+
+== Included Features
+* Formatting with https://black.readthedocs.io/[black] & https://pycqa.github.io/isort/[isort] footnote:[Actually uses Ruff for speed]
+  * Automatically run with https://github.com/evilmartians/lefthook[lefthook] for git hooks (faster than https://pre-commit.org[pre-commit])
+* Testing with https://pytest.org[pytest]
+* A simple https://just.systems/[`Justfile`] to run all of the above
+
+=== TODO (Planned Features)
+* [ ] Linting with https://beta.ruff.rs[Ruff]?
+  * Already used for `isort`
+* [ ] Use tox for tests
+
+== Related Projects
+Here are some related projects & resources.
+
+=== Official Packaging Guidelines
+The https://pypa.io/[Python Packaging Authority] (PyPa) is the group that publishes `pip`, {setuptools-docs}[`setuptools`] and manages the <<pypi.org>> package registry.
+
+They have now pubished an *official* guide to python packaging: The {packaging-guide-official}[_Python Packaging User Guide_], which gives best practices.
+
+.Key Links
+* https://packaging.python.org/en/latest/key_projects/[Project Summaries] -- Project summaries, offering alternatie tools & build systems.
+
+=== Obligatory XKCD: Python Environment
+image::https://imgs.xkcd.com/comics/python_environment_2x.png["XKCD 1987: Python Environment",500,link=https://xkcd.com/1987]

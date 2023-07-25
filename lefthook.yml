@@ -1,0 +1,11 @@
+skip_output:
+  - meta
+  - success
+  - summary
+pre-commit:
+  commands:
+    check-format:
+      tags: formatter
+      run: just check-format
+    check-config:
+      run: python3 ./build_helper.py convert-config-file --check
