@@ -6,7 +6,9 @@ pre-commit:
   commands:
     black:
       tags: formatter
+      glob: "*.{py,pyi}"
       run: black --check -- {staged_files}
     isort:
       tags: formatter
+      glob: "*.{py,pyi}"
       run: isort --check -- {staged_files}
