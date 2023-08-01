@@ -5,7 +5,7 @@ build: mypy && _test check-format
 
 test: mypy && check-format
     # Testing project
-    @_test
+    @just _test
 
 mypy:
     mypy src
